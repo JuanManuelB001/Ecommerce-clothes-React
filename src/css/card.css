@@ -1,0 +1,17 @@
+.size-list{
+    display: inline-block; 
+    outline: none;
+    border: none;
+    box-shadow: 10px 10px 20px rgba(31, 29, 29, 0.9);
+    
+    background-color: rgb(174, 188, 188);
+    border-radius: 40%;
+    font-weight: bolder;
+    padding: 10px 10px;
+    margin: 10px 8px;
+    transition: transform 0.8s ease;
+}
+
+.size-list:hover{
+    transform: scale(1.1);
+}
