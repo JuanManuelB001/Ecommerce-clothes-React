@@ -1,5 +1,6 @@
 import { useState } from "react";
 import loadingImage from "../img/loading.png";
+import "../css/getImages.css"
 
 export function GetImage({name, png, secondImage = loadingImage}){
     const [image, setimage] = useState(png || secondImage );
@@ -12,8 +13,8 @@ export function GetImage({name, png, secondImage = loadingImage}){
         }
     }
     return(
-        <div>
-            <img src={image} alt={name} onError={handlError}/>
+        <div className="container-image">
+            <img className="clothe-image" src={image} alt={name} onError={handlError}/>
         </div>
     );
 }

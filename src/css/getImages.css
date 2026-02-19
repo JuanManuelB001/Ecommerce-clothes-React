@@ -1,0 +1,17 @@
+
+.container-image{
+    margin: 10px auto;
+    padding: 20px 5%;
+}
+
+.clothe-image{
+    border-radius: 20%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.57s ease;
+}
+
+.clothe-image:hover{
+    transform: scale(1.1);
+}
