@@ -16,8 +16,31 @@
 }
 
 .card-icon {
+  position: relative;
   font-size: 60px;
-  width: 50px;
+  cursor: pointer;
+  color: #1f2937;
+}
+
+.card-icon::before{
+  content: 'Add-Cart';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  font-size: 10px;
+  
+  background: black;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.card-icon:hover:before{
+  opacity: 1;
 }
 
 .material-symbols-outlined {
@@ -57,6 +80,7 @@
   margin: 10px 0;
   padding: 15px auto;
 }
+
 
 .size-list:hover {
   transform: scale(1.1);

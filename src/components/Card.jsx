@@ -1,8 +1,11 @@
 import { Link, Links } from "react-router-dom";
 import "../css/card.css";
 import { GetImage } from "./GetImage";
+import { useCartStore } from "./useCartStore";
+
 
 export function Card({ props }) {
+  const addToCart = useCartStore((state)=> state.addToCart)
   return (
     <div className="card-container">
       {props?.map((product) => (
@@ -31,7 +34,7 @@ export function Card({ props }) {
             <Link 
             to={'add-cart/'}
             >
-            <span className="material-symbols-outlined card-icon">shopping_cart</span>
+            <span className="material-symbols-outlined card-icon">shopping_cart  </span>
             </Link>
           </div>
         </div>
