@@ -6,6 +6,10 @@
 
 }
 
+.title{
+    color: #1F2937;
+}
+
 .size-list{
     display: inline-block; 
     outline: none;
@@ -28,7 +32,9 @@
 
 .card-info{
     width: 70%;
-    background-color: aqua;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    box-shadow:  0 10px 30px rgba(0,0,0,0.5);
     margin: 10px 0;
     padding: 15px auto;
 }

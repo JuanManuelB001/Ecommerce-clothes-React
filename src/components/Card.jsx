@@ -7,7 +7,7 @@ export function Card({ props }) {
       {props?.map((product) => (
         <div key={product.id} className="card-info">
           <Link className="card-img" to={`info-clothes/${product.id}`} state={{ product }}>
-            <h3>{product.title}</h3>
+            <h3 className="title" >{product.title}</h3>
             <GetImage name = {product.id} png={product.img} />
             <div>
               {product.sizeList?.map((size, index) => (

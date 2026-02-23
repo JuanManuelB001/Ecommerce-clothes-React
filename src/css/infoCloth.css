@@ -1,0 +1,53 @@
+.container-cloth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.cloth {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  margin: 0 auto;
+}
+
+.info-cloth {
+  background-color: aqua;
+  max-width: 1200px;
+  width: 1000px;
+  text-align: center;
+  padding: 30px 10px;
+  margin: 20px 20px;
+}
+
+.size-badge {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+strong{
+    color: #2563EB;
+}
+.size-badge:hover {
+  background-color: black;
+  color: white;
+}
+
+.img-cloth {
+  max-width: 500px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.img-cloth:hover{
+    transform: scale(0.9);
+}
