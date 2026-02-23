@@ -58,3 +58,18 @@ strong {
 .img-cloth:hover {
   transform: scale(0.9);
 }
+
+
+@media (max-width:660px){
+  .container-cloth{
+    
+    flex-direction: column;
+  }
+  .cloth{
+    flex-direction: column-reverse;
+    width: 90%;
+  }
+  .info-cloth{
+    width: 70%;
+  }
+}
