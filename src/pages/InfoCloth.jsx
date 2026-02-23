@@ -10,7 +10,7 @@ export function InfoCloth() {
       <div className="cloth">
 
         <div className="info-cloth">
-          <h2>{cloth.title} / {cloth.style}</h2>
+          <h2 className="cloth-title" >{cloth.title} / {cloth.style}</h2>
           <p><strong>Style:</strong> {cloth.style}</p>
           <p><strong>Description:</strong> {cloth.description}</p>
           <p><strong>Installments:</strong> {cloth.installments}</p>
