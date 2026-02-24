@@ -5,9 +5,11 @@ import { useCartStore } from "./useCartStore";
 
 
 export function Card({ props }) {
-  const addToCart = useCartStore((state)=> state.addToCart)
+  const addToCart = useCartStore((state)=> state.updateCart)
 
-  const handleAddToCart = (product)=>{
+  const handleAddToCart = (e,product)=>{
+    e.preventDefault(); // Evita acciones por defecto
+  e.stopPropagation(); // Detiene la propagación hacia el Link padre
     addToCart(product)
     console.log("Producto Anadido al carrito: ", product)
   }
@@ -37,7 +39,7 @@ export function Card({ props }) {
               
             ></link>
             <button 
-              onClick={() => handleAddToCart(product)} 
+              onClick={(e) => handleAddToCart(e, product)} 
               style={{ background: 'none', border: 'none', cursor: 'pointer' }}
             >
               <span className="material-symbols-outlined card-icon">
