@@ -6,6 +6,11 @@ import { useCartStore } from "./useCartStore";
 
 export function Card({ props }) {
   const addToCart = useCartStore((state)=> state.addToCart)
+
+  const handleAddToCart = (product)=>{
+    addToCart(product)
+    console.log("Producto Anadido al carrito: ", product)
+  }
   return (
     <div className="card-container">
       {props?.map((product) => (
@@ -31,11 +36,14 @@ export function Card({ props }) {
               rel="stylesheet"
               
             ></link>
-            <Link 
-            to={'add-cart/'}
+            <button 
+              onClick={() => handleAddToCart(product)} 
+              style={{ background: 'none', border: 'none', cursor: 'pointer' }}
             >
-            <span className="material-symbols-outlined card-icon">shopping_cart  </span>
-            </Link>
+              <span className="material-symbols-outlined card-icon">
+                shopping_cart
+              </span>
+            </button>
           </div>
         </div>
       ))}

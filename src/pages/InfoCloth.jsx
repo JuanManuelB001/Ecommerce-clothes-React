@@ -1,11 +1,13 @@
 import { useLocation } from "react-router-dom";
 import "../css/infoCloth.css"
-
+import { Card } from "../components/Card";
+import { UrlData } from "../data/UrlData";
 export function InfoCloth() {
   const { state } = useLocation();
   const cloth = state.product;
-
+  const data = UrlData("");
   return (
+    <div className="container">
     <div className="container-cloth">
       <div className="cloth">
 
@@ -34,6 +36,10 @@ export function InfoCloth() {
         <img src={cloth.img} alt={cloth.title} className="img-cloth" />
 
       </div>
+    </div >
+            <div className="card">
+              <Card props={data} />
+            </div>
     </div>
   );
 }

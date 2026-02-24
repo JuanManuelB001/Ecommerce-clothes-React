@@ -8,7 +8,6 @@ export function Index() {
   const urlData = UrlData("");
   return (
     <div>
-      index page
       <Card props={urlData} />
     </div>
   );
