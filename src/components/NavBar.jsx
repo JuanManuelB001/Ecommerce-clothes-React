@@ -8,7 +8,7 @@ export function NavBar(){
             <Link
             to={'/add-cart'}
             >
-            Cart
+            Cart 
             </Link>
         </div>
     );
