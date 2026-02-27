@@ -2,7 +2,7 @@ import { Link, Links } from "react-router-dom";
 import "../css/card.css";
 import { GetImage } from "./GetImage";
 import { useCartStore } from "./useCartStore";
-
+import { CartNotification } from "./CartNotification";
 
 export function Card({ props }) {
   const addToCart = useCartStore((state)=> state.updateCart)
@@ -11,10 +11,12 @@ export function Card({ props }) {
     e.preventDefault(); // Evita acciones por defecto
   e.stopPropagation(); // Detiene la propagación hacia el Link padre
     addToCart(product)
+    
     console.log("Producto Anadido al carrito: ", product)
   }
   return (
     <div className="card-container">
+      <CartNotification />
       {props?.map((product) => (
         <div key={product.id} className="card-info">
           <Link
