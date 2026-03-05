@@ -4,9 +4,11 @@ import { Link, Links } from "react-router-dom";
 import { GetImage } from "./GetImage";
 export function CardElement(){
     const cart = useCartStore((state)=> state.cart)
-    //const deleteElement = useCartStore((state)=> state.removeItemCart())
-    const handleDelete = ()=>{
-        console.log("Producto Eliminado")
+    const deleteElement = useCartStore((state)=> state.removeItemCart)
+
+    const handleDelete = (id)=>{
+        deleteElement(id)
+        console.log(`Producto ${id} Eliminado`)
     }
     return(
         <div className="container-cart-product">
@@ -20,7 +22,7 @@ export function CardElement(){
                <h3>{cloth.title}</h3>
                <GetImage name={cloth.id} png={cloth.img}/>
             <div className="button-cart">
-                <button onClick={handleDelete}>Delete</button>
+                <button onClick={()=> handleDelete(cloth.id)}>Delete</button>
             </div>
             </div>
            ))}

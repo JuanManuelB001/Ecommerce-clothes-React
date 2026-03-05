@@ -10,6 +10,8 @@
 }
 
 .cart-product{
-    background-color: rgb(126, 15, 15);
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
     width: 300px;
 }
