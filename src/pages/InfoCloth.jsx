@@ -24,7 +24,7 @@ export function InfoCloth() {
     window.scrollTo(0, 0 )
   }, [state])
   return (
-    <div>
+    <div className="index-page">
     <div>
       <NavBar/>
     

@@ -8,7 +8,7 @@ export function Index() {
 
   const urlData = UrlData("");
   return (
-    <div>
+    <div className="index-page">
       <NavBar/>
       <Card props={urlData} />
     </div>
