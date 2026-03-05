@@ -59,6 +59,17 @@ strong {
   transform: scale(0.9);
 }
 
+.info-card{
+  padding-top: 20px;
+}
+
+.title-clothes{
+  padding-top: 20px;
+  letter-spacing: 1.2rem;
+  font-weight: bold;
+  font-size: 40px;
+}
+
 
 @media (max-width:660px){
   .container-cloth{

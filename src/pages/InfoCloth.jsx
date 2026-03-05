@@ -20,6 +20,7 @@ export function InfoCloth() {
   };
   return (
     <div>
+    <div>
       <NavBar/>
     
     <div className="container">
@@ -80,10 +81,12 @@ export function InfoCloth() {
           <img src={cloth.img} alt={cloth.title} className="img-cloth" />
         </div>
       </div>
-      <div className="card">
+    </div>
+    </div>
+    <h3 className="title-clothes">More Clothe's</h3>
+      <div className="info-card">
         <Card props={data} />
       </div>
-    </div>
-    </div>
+      </div>
   );
 }
