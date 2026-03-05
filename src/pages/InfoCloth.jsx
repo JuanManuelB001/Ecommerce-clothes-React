@@ -5,6 +5,7 @@ import { UrlData } from "../data/UrlData";
 import { useCartStore } from "../components/useCartStore";
 import { CartNotification } from "../components/CartNotification";
 import { NavBar } from "../components/NavBar";
+import { useEffect } from "react";
 export function InfoCloth() {
   const { state } = useLocation();
   const addToCart = useCartStore((state) => state.updateCart);
@@ -18,6 +19,10 @@ export function InfoCloth() {
     console.log(`Producto  agregado`);
     console.log(product)
   };
+
+  useEffect(()=>{
+    window.scrollTo(0, 0 )
+  }, [state])
   return (
     <div>
     <div>

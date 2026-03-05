@@ -4,6 +4,7 @@ import { GetImage } from "./GetImage";
 import { useCartStore } from "./useCartStore";
 import { CartNotification } from "./CartNotification";
 
+
 export function Card({ props }) {
   const addToCart = useCartStore((state)=> state.updateCart)
 
@@ -21,7 +22,7 @@ export function Card({ props }) {
         <div key={product.id} className="card-info">
           <Link
             className="card-img"
-            to={`info-clothes/${product.id}`}
+            to={`/info-clothes/${product.id}`}
             state={{ product }}
           >
             <h3 className="title">{product.title}</h3>
