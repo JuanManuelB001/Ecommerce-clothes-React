@@ -6,9 +6,10 @@ export function AddCard() {
   const cart = useCartStore((state) => state.cart);
   const [isClient, setIsClient] = useState(false);
   const deleteCart = useCartStore((state)=> state.clearCart)
-  const [total, setTotal] = useState([]);
+  const [total, setTotal] = useState(0);
   // Esto asegura que el carrito solo se renderice cuando el cliente esté listo
   useEffect(() => {
+    setTotal(0)
     setIsClient(true);
     
   }, []);
@@ -19,10 +20,10 @@ export function AddCard() {
 const sumarTotal = ()=>{
     let total = 0;
       cart.map((item)=>{
-       console.log(item.price)
        total += item.price
       })
-      setTotal(total)
+      console.log(total.toFixed(2))
+      setTotal(total.toFixed(2))
       
     };
   const handleDelete = ()=>{
@@ -36,12 +37,14 @@ const sumarTotal = ()=>{
     <div className={sytle.container}>
        <h2>Productos en carrito: {cart.length}</h2>
        <button onClick={handleDelete}>Clear Cart</button>
-       {
+      <div className={sytle.containerCard}>
+         {
         // VALIDAR SI HAY ALGO EN EL CARRITO,MOSTRAR ELEMENTOS
         cart.length>0 
         ?  <CardElement porps={cart}/>
         : <p>Nothing in Cart</p>
       }
+      </div>
       {
         cart.length>0
         ? <div className={sytle.total}>Total a Pagar: <span >{total}$</span></div>
