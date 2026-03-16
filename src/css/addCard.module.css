@@ -1,7 +1,16 @@
-.container {
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+
+.slideIn{
+  animation: slide-in 2s  forwards;
+}
+
+@keyframes slide-in{
+  from{
+    opacity: 0;
+    transform: translateX(100%);
+  }to{
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .containerCard {
@@ -25,12 +34,4 @@
 .total span {
   font-size: 1.5rem;
   font-weight: 800;
-}
-
-/* Mobile: cards en columna */
-@media (max-width: 660px) {
-  .containerCard {
-    flex-direction: column;
-    align-items: center;
-  }
 }

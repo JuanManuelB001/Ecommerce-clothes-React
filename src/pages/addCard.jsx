@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useCartStore } from '../components/useCartStore';
 import { CardElement } from '../components/CardElement';
 import sytle from '../css/addCard.module.css'
+import { NavBar } from '../components/NavBar';
 export function AddCard() {
   const cart = useCartStore((state) => state.cart);
   const [isClient, setIsClient] = useState(false);
@@ -34,7 +35,9 @@ const sumarTotal = ()=>{
   if (!isClient) return null; // O un cargando...
 
   return (
-    <div className={sytle.container}>
+    
+    <div className={`${sytle.container}  ${sytle.slideIn}`}>
+        <NavBar/>
        <h2>Productos en carrito: {cart.length}</h2>
        <button onClick={handleDelete}>Clear Cart</button>
       <div className={sytle.containerCard}>

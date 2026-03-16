@@ -14,3 +14,10 @@
     border-radius: 16px;
     width: 300px;
 }
+
+@media (max-width: 560px){
+    .container-cart-product{
+        display: flex;
+        flex-direction: column;
+    }
+}

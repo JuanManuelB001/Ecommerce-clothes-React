@@ -12,10 +12,13 @@
   "dependencies": {
     "@fortawesome/react-fontawesome": "^3.2.0",
     "@heroui/navbar": "^2.2.29",
+    "@heroui/theme": "^2.4.26",
+    "framer-motion": "^12.37.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.13.0",
     "react-toastify": "^11.0.5",
+    "tailwindcss": "^4.2.1",
     "zustand": "^5.0.11"
   },
   "devDependencies": {
