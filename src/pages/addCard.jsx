@@ -3,11 +3,21 @@ import { useCartStore } from '../components/useCartStore';
 import { CardElement } from '../components/CardElement';
 import sytle from '../css/addCard.module.css'
 import { NavBar } from '../components/NavBar';
+import { ConfirmDelete } from '../components/ConfirmDelete';
 export function AddCard() {
   const cart = useCartStore((state) => state.cart);
   const [isClient, setIsClient] = useState(false);
   const deleteCart = useCartStore((state)=> state.clearCart)
   const [total, setTotal] = useState(0);
+  const [showConfirm, setShowConfirm] = useState(false);
+  const handleConfirmDelete = () => {
+  deleteCart();
+  setShowConfirm(false);
+};
+
+const handleCancel = () => {
+  setShowConfirm(false);
+};
   // Esto asegura que el carrito solo se renderice cuando el cliente esté listo
   useEffect(() => {
     setTotal(0)
@@ -29,6 +39,7 @@ const sumarTotal = ()=>{
     };
   const handleDelete = ()=>{
     // LIMPIAR CARRITO
+    setShowConfirm(true)
     console.log(cart)
     deleteCart()
   }
@@ -47,7 +58,7 @@ const sumarTotal = ()=>{
         : <p>Nothing in Cart</p>
       }
       <div className={sytle.buttons}>
-        <button onClick={handleDelete}>Clear Cart</button>
+        <button onClick={() => (setShowConfirm(true))}>Clear Cart</button>
       </div>
       </div>
       {
@@ -55,7 +66,13 @@ const sumarTotal = ()=>{
         ? <div className={sytle.total}>Total a Pagar: <span >{total}$</span></div>
         : ""
       }
-      
+      {showConfirm && (
+  <ConfirmDelete
+    message="¿Seguro que quieres vaciar el carrito?"
+    onConfirm={handleConfirmDelete}
+    onCancel={handleCancel}
+  />
+)}
     </div>
   );
 }
