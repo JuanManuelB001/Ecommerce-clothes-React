@@ -39,7 +39,6 @@ const sumarTotal = ()=>{
     <div className={`${sytle.container}  ${sytle.slideIn}`}>
         <NavBar/>
        <h2>Productos en carrito: {cart.length}</h2>
-       <button onClick={handleDelete}>Clear Cart</button>
       <div className={sytle.containerCard}>
          {
         // VALIDAR SI HAY ALGO EN EL CARRITO,MOSTRAR ELEMENTOS
@@ -47,6 +46,9 @@ const sumarTotal = ()=>{
         ?  <CardElement porps={cart}/>
         : <p>Nothing in Cart</p>
       }
+      </div>
+      <div className={sytle.buttons}>
+        <button onClick={handleDelete}>Clear Cart</button>
       </div>
       {
         cart.length>0
