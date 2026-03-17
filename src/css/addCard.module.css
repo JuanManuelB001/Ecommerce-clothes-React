@@ -1,13 +1,19 @@
-
-.slideIn{
-  animation: slide-in 2s  forwards;
+.slideIn {
+  animation: slide-in 2s forwards;
+}
+h2{
+  letter-spacing: 12px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2.2rem;
+  font-weight: bold;
 }
 
-@keyframes slide-in{
-  from{
+@keyframes slide-in {
+  from {
     opacity: 0;
     transform: translateX(100%);
-  }to{
+  }
+  to {
     opacity: 1;
     transform: translateX(0);
   }
@@ -19,23 +25,28 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  position: relative;
 }
 
 .total {
   display: flex;
-  justify-content: flex-end;
+  justify-content:center;
   padding: 10px 12px;
   margin: 20px 0;
-  font-family: 'Lucida Sans', sans-serif;
+  font-family: "Lucida Sans", sans-serif;
   letter-spacing: 6px;
   font-size: 2rem;
 }
 
 .buttons{
+  
   display: flex;
-  justify-content: flex-end;
+  width: 100%;
+  margin-top:20px;
+  justify-content: center;
+  align-items: flex-end;
 }
-.buttons button{
+.buttons button {
   border-radius: 10px;
   border: none;
   outline: none;
@@ -44,7 +55,7 @@
   transition: all 0.8s ease;
 }
 
-.buttons button:hover{
+.buttons button:hover {
   transform: scale(1.1);
   background-color: black;
   color: white;
@@ -53,4 +64,11 @@
 .total span {
   font-size: 1.5rem;
   font-weight: 800;
+}
+
+@media (max-width: 600px) {
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
 }

@@ -46,9 +46,9 @@ const sumarTotal = ()=>{
         ?  <CardElement porps={cart}/>
         : <p>Nothing in Cart</p>
       }
-      </div>
       <div className={sytle.buttons}>
         <button onClick={handleDelete}>Clear Cart</button>
+      </div>
       </div>
       {
         cart.length>0
