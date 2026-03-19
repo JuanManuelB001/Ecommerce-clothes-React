@@ -4,6 +4,7 @@ import { CardElement } from '../components/CardElement';
 import sytle from '../css/addCard.module.css'
 import { NavBar } from '../components/NavBar';
 import { ConfirmDelete } from '../components/ConfirmDelete';
+import { style } from 'framer-motion/client';
 export function AddCard() {
   const cart = useCartStore((state) => state.cart);
   const [isClient, setIsClient] = useState(false);
@@ -49,16 +50,18 @@ const sumarTotal = ()=>{
     
     <div className={`${sytle.container}  ${sytle.slideIn}`}>
         <NavBar/>
-       <h2>Productos en carrito: {cart.length}</h2>
+       <h2>{cart.length > 0 ? `Productos en carrito: ${cart.length}` : "" }</h2>
       <div className={sytle.containerCard}>
          {
         // VALIDAR SI HAY ALGO EN EL CARRITO,MOSTRAR ELEMENTOS
         cart.length>0 
         ?  <CardElement porps={cart}/>
-        : <p>Nothing in Cart</p>
+        : <p ><span className={sytle.nothingCart}>Nothing in Cart</span></p>
       }
       <div className={sytle.buttons}>
-        <button onClick={() => (setShowConfirm(true))}>Clear Cart</button>
+        {
+          cart.length> 0 &&(<button onClick={() => (setShowConfirm(true))}>Clear Cart</button>)
+        }
       </div>
       </div>
       {
