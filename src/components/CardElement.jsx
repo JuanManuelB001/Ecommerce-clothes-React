@@ -11,7 +11,7 @@ const [showConfirm, setShowConfirm] = useState(false)
     const [clothId, setClothId] = useState();
 const handleConfirmDelete = ()=>{
     deleteElement(clothId);
-    console.log(`Producto ${id} Eliminado`);
+    console.log(`Producto ${clothId} Eliminado`);
     setShowConfirm(false)
 }
 const handleCancel = ()=>{
