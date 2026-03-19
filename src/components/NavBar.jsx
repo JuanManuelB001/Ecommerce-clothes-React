@@ -6,11 +6,11 @@ export function NavBar() {
     <div className="container-nav">
       <div className="nav-container">
         <Link to="/" className="nav-button">
-        Inicio
+        Store
       </Link>
 
       <Link to="/add-cart" className="nav-button">
-        Ver Carrito
+        Cart
       </Link>
       </div>
     </div>
