@@ -5,8 +5,8 @@
   min-height: 60vh;
 }
 
-.cloth-title{
-    letter-spacing: 12px;
+.cloth-title {
+  letter-spacing: 12px;
 }
 
 .cloth {
@@ -16,6 +16,16 @@
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   margin: 0 auto;
+}
+
+.notification-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+
+  padding-right: 20px;
+
+  height: 0;
 }
 
 .info-cloth {
@@ -59,28 +69,26 @@ strong {
   transform: scale(0.9);
 }
 
-.info-card{
+.info-card {
   padding-top: 20px;
 }
 
-.title-clothes{
+.title-clothes {
   padding-top: 20px;
   letter-spacing: 1.2rem;
   font-weight: bold;
   font-size: 40px;
 }
 
-
-@media (max-width:660px){
-  .container-cloth{
-    
+@media (max-width: 660px) {
+  .container-cloth {
     flex-direction: column;
   }
-  .cloth{
+  .cloth {
     flex-direction: column-reverse;
     width: 90%;
   }
-  .info-cloth{
+  .info-cloth {
     width: 70%;
   }
 }

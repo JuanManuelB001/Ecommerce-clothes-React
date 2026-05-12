@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import { UrlData } from "../data/UrlData";
 import { Card } from "../components/Card";
-import "../css/index.css"
+import "../css/index.css";
 import { NavBar } from "../components/NavBar";
+import { CartNotification } from "../components/CartNotification";
 export function Index() {
   const [data, setData] = useState();
 
   const urlData = UrlData("");
   return (
     <div className="index-page">
-      <NavBar/>
+      <NavBar />
       <Card props={urlData} />
     </div>
   );
