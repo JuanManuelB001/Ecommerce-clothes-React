@@ -55,7 +55,6 @@ export function CardElement() {
           </SwiperSlide>
         ))}
       </Swiper>
-      /**sdafasd */
       {showConfirm && (
         <ConfirmDelete
           message="¿Seguro que quieres eliminar este producto?"
