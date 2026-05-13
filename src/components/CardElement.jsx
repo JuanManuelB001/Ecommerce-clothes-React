@@ -37,10 +37,26 @@ export function CardElement() {
         className="netflix-swiper"
         modules={[Navigation]}
         navigation
-        slidesPerView={"auto"}
-        spaceBetween={20}
         centeredSlides={false}
         grabCursor={true}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 12,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+          },
+          1400: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+        }}
       >
         {cart.map((item) => (
           <SwiperSlide key={item.id} className="netflix-slide">

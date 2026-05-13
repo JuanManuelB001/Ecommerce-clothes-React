@@ -83,3 +83,66 @@
   color: white;
   transform: scale(1.05);
 }
+
+@media (min-width: 720px) {
+  .netflix-slide {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  .netflix-swiper {
+    padding: auto;
+  }
+
+  .netflix-card {
+    max-width: 100%;
+    max-width: 220px;
+    padding: 40px;
+  }
+  .netflix-card img {
+    width: 100%;
+    max-width: 300px;
+    height: 420px;
+    object-fit: cover;
+  }
+
+  .netflix-card h3 {
+    font-size: 20px;
+  }
+
+  .button-cart button {
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .netflix-slide {
+    display: flex;
+    justify-content: center;
+  }
+  .netflix-card {
+    max-width: 240px;
+    padding: 10px;
+  }
+
+  .netflix-card img {
+    width: 100%;
+    max-width: 300px;
+    height: 420px;
+    object-fit: cover;
+  }
+
+  .netflix-card h3 {
+    font-size: 20px;
+  }
+
+  .button-cart button {
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+}
