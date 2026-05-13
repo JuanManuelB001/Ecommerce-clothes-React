@@ -15,7 +15,6 @@
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   padding: 15px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -115,6 +114,10 @@
 @media (max-width: 660px) {
   .card-container {
     grid-template-columns: 1fr;
+  }
+  .card-info {
+    width: 95%;
+    padding: 10px 15px;
   }
 }
 
